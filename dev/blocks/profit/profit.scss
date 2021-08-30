@@ -9,14 +9,16 @@
 		grid-gap: 32px;
 		padding: 40px 0 48px;
 		@media (min-width: $screen-nexus) {
-			grid-auto-flow: column;
+			
 		}
 		@media (min-width: $screen-sm) {
 			padding: 64px 0;
 			grid-gap: 40px;
+			
 		}
 		@media (min-width: $screen-md) {
 			padding: 80px 0;
+			grid-auto-flow: column;
 		}
 		@media (min-width: $screen-lg) {
 			grid-gap: 65px;
@@ -27,7 +29,7 @@
 		flex-direction: column;
 		justify-content: center;
 		@media (min-width: $screen-sm) {
-			min-height: 320px;
+			//min-height: 320px;
 		}
 		@media (min-width: $screen-md) {
 			min-height: 400px;
@@ -38,16 +40,10 @@
 		& + & {
 			padding-top: 32px;
 			box-shadow: var(--inner-shadow-top);
-			@media (min-width: $screen-nexus) {
-				box-shadow: var(--inner-shadow-left);
-				padding-top: 0;
-				padding-left: 24px;
-			}
-			@media (min-width: $screen-sm) {
-				padding-left: 24px;
-			}
 			@media (min-width: $screen-md) {
+				padding-top: 0;
 				padding-left: 32px;
+				box-shadow: var(--inner-shadow-left);
 			}
 		}
 	}
@@ -60,6 +56,7 @@
 	&__heading {
 		font-family: var(--font-primary);
 		font-size: 24px;
+		font-weight: 400;
 		line-height: 1;
 		margin: 0;
 		@media (min-width: $screen-sm) {
@@ -76,6 +73,7 @@
 		color: var(--color-accent);
 		font-family: var(--font-primary);
 		font-size: 50px;
+		font-weight: 400;
 		line-height: 1;
 		margin: 4px 0 0 0;
 		text-shadow: var(--text-shadow);
@@ -115,15 +113,10 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
-		@media (min-width: $screen-nexus) {
-			align-items: center;
-		}
-		@media (min-width: $screen-sm) {
-			margin-bottom: auto;
-			margin-top: 64px;
-		}
 		@media (min-width: $screen-md) {
 			margin-top: 112px;
+			margin-bottom: auto;
+			align-items: center;
 		}
 		@media (min-width: $screen-lg) {
 			margin-top: 164px;

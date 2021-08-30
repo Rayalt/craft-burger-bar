@@ -10,6 +10,9 @@
 	--color-white:					#ffffff;
 	--color-black:					#000000;
 	--color-accent:					#ffd600;
+	--color-accent-hover-light:		#ffd31f;
+	--color-accent-hover-dark:		#ffc400;
+	--color-accent-active-dark:		#ffc400;
 	--color-primary:				#000000;
 	--color-primary-50:				#0000007f;
 	--color-primary-25:				#00000040;
@@ -21,6 +24,8 @@
 	--text-shadow:					2px 2px 0 var(--color-primary);
 	--text-shadow-bold:				4px 4px 0 var(--color-primary);
 	--button-shadow:				0 8px 24px var(--color-accent);
+	--button-shadow-hover:			0 12px 24px var(--color-accent-hover-dark);
+	--button-shadow-active:			0 4px 16px var(--color-accent-hover-dark);
 	--bullet-shadow:				0 4px 8px var(--color-primary-50);
 	--modal-shadow:					0 8px 16px var(--color-primary-25);
 	--inner-shadow-top:				0 -1px 0 var(--color-primary-20);

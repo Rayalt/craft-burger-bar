@@ -18,7 +18,9 @@ window.onload = function() {
 
 		pagination: {
 			el: '.swiper-pagination',
+			dynamicBullets: true,
 		},
+		
 		
 		// Navigation arrows
 		navigation: {

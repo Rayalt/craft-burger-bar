@@ -12,8 +12,6 @@
 		}
 	}
 	&__citation {
-		display: flex;
-		flex-direction: column;
 		margin: 0;
 		position: relative;
 		z-index: 2;
@@ -42,21 +40,20 @@
 			}
 		}
 		&:nth-of-type(3) {
-			@media (min-width: $screen-sm) {
+			@media (min-width: $screen-md) {
 				width: 67%;
 			}
 		}
 		&:last-of-type {
 			@media (min-width: $screen-sm) {
-				width: 50%;
+				width: 60%;
 			}
 			@media (min-width: $screen-lg) {
-				width: 53%;
+				width: 54%;
 			}
 		}
 	}
 	&__sign {
-		display: block;
 		margin-top: 200px;
 		width: 75%;
 		@media (min-width: $screen-nexus) {
@@ -67,8 +64,8 @@
 			width: 100%;
 		}
 		@media (min-width: $screen-sm) {
-			margin-right: 350px;
-			margin-top: 60px;
+			margin-right: 320px;
+			margin-top: 88px;
 			max-width: 300px;
 			text-align: right;
 		}
@@ -111,7 +108,7 @@
 		position: absolute;
 		right: 0;
 		@media (min-width: $screen-sm) {
-			height: 450px;
+			height: 350px;
 		}
 		@media (min-width: $screen-md) {
 			height: 500px;

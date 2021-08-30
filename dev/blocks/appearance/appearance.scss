@@ -14,11 +14,8 @@
 	}
 	&__slider {
 		margin-top: 32px;
-		//height: 400px;
-		//width: 100%;
 		@media (min-width: $screen-sm) {
 			margin-top: 64px;
-			//height: 640px;
 		}
 		
 	}
@@ -26,23 +23,19 @@
 		align-items: center;
 	}
 	&__slide {
-		//height: 600px;
-		//width: 640px !important;
-		transition: opacity .25s ease;
+		height: 0;
 		opacity: .5;
 		overflow: hidden;
-		height: 320px;
-		@media (min-width: $screen-nexus) {
-			//width: 150px !important;
-			//height: 300px;
-			
-		}
-		@media (min-width: $screen-sm) {
-			height: 420px;
-		}
+		padding-top: 56.58%;
+		position: relative;
+		transition: opacity .25s ease;
+		width: 100%;
 		@media (min-width: $screen-md) {
 			border-radius: 8px;
+			//height: auto;
+			padding-top: 0;
 			width: 700px !important;
+			height: 400px;
 		}
 		@media (min-width: $screen-lg) {
 			width: 1120px !important;
@@ -55,21 +48,33 @@
 		height: 100%;
 		object-fit: cover;
 		transition: transform .25s ease;
+		left: 0;
+		position: absolute;
+		top: 0;
 		@media (min-width: $screen-md) {
 			border-radius: 8px;
 			transform: scale(.94);
+			position: static;
 		}
+	}
+	&__pagination {
+		bottom: 0 !important;
+		padding-bottom: 10px;
 	}
 	&__button {
 		background: var(--color-accent);
 		border-radius: 50%;
+		display: none;
 		height: 32px;
 		outline: none;
-		width: 32px;
 		transition: background .25s ease;
+		width: 32px;
 		@media (min-width: $screen-sm) {
 			height: 40px;
 			width: 40px;
+		}
+		@media (min-width: $screen-md) {
+			display: flex;
 		}
 		@media (min-width: $screen-lg) {
 			height: 56px;
@@ -138,25 +143,16 @@
 }
 
 .swiper-pagination-bullet {
-	height: 6px;
-	width: 6px;
 	background: var(--color-secondary);
-	opacity: 1;
 	box-shadow: var(--bullet-shadow);
+	opacity: 1;
 }
 .swiper-pagination-bullet-active {
 	background: var(--color-accent);
-	height: 8px;
-	width: 8px;
 }
 .swiper-slide-active {
-	//width: 1120px !important;
-	//height: 100%;
 	transition: opacity .25s ease;
 	opacity: 1;
-	@media (min-width: $screen-nexus) {
-		//width: 300px !important;
-	}
 }
 .swiper-slide-active .appearance__img {
 	@media (min-width: $screen-md) {

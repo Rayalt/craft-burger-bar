@@ -4,6 +4,7 @@
 
 .differences {
 	position: relative;
+	box-shadow: var(--inner-shadow-top-light);
 	&__bg {
 		height: 100%;
 		left: 0;

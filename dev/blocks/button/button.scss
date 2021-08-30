@@ -19,7 +19,7 @@
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	transition: transform .25s ease;
+	transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
 	width: 100%;
 	@media (min-width: $screen-sm) {
 		font-size: 16px;
@@ -28,6 +28,12 @@
 		font-size: 18px;
 	}
 	&:hover {
-		transform: translateY(-2px);
+		background: var(--color-accent-hover-light);
+		box-shadow: var(--button-shadow-hover);
+		transform: translateY(-4px);
+	}
+	&:active {
+		background: var(--color-accent-active-dark);
+		box-shadow: var(--button-shadow-active);
 	}
 }

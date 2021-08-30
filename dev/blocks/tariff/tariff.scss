@@ -23,7 +23,7 @@
 	&__tiles {
 		display: flex;
 		flex-direction: column;
-		@media (min-width: $screen-nexus) {
+		@media (min-width: $screen-md) {
 			align-items: center;
 			flex-direction: row;
 		}
@@ -32,14 +32,8 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		@media (min-width: $screen-nexus) {
-			align-items: center;
-			min-height: 280px;
-		}
-		@media (min-width: $screen-sm) {
-			min-height: 320px;
-		}
 		@media (min-width: $screen-md) {
+			align-items: center;
 			min-height: 400px;
 		}
 		@media (min-width: $screen-lg) {
@@ -50,15 +44,15 @@
 			margin-top: 40px;
 			padding-top: 40px;
 			@media (min-width: $screen-nexus) {
-				box-shadow: var(--inner-shadow-left-light);
-				margin-left: 42px;
-				margin-top: 0;
-				padding-left: 42px;
-				padding-top: 0;
+				margin-top: 42px;
+				padding-top: 42px;
 			}
 			@media (min-width: $screen-md) {
+				box-shadow: var(--inner-shadow-left-light);
 				margin-left: 112px;
+				margin-top: 0;
 				padding-left: 112px;
+				padding-top: 0;
 			}
 			@media (min-width: $screen-lg) {
 				margin-left: 160px;
@@ -158,8 +152,6 @@
 		margin-top: 32px;
 		padding: 24px;
 		@media (min-width: $screen-nexus) {
-			align-items: center;
-			flex-direction: row;
 			padding: 24px 32px;
 		}
 		@media (min-width: $screen-sm) {
@@ -167,39 +159,48 @@
 			padding: 32px 48px;
 		}
 		@media (min-width: $screen-md) {
+			align-items: center;
+			flex-direction: row;
 			margin-top: 48px;
 			padding: 40px 72px;
 		}
 	}
 	&__action-title {
 		color: var(--color-secondary);
-		flex-shrink: 0;
 		font-family: var(--font-primary);
-		font-size: 16px;
+		font-size: 20px;
 		line-height: 1.2;
 		margin: 0;
 		text-shadow: var(--text-shadow);
 		span {
 			color: var(--color-accent);
 		}
-		@media (min-width: $screen-sm) {
+		@media (min-width: $screen-nexus) {
 			font-size: 24px;
+			max-width: 400px;
+		}
+		@media (min-width: $screen-sm) {
+			font-size: 26px;
 		}
 		@media (min-width: $screen-md) {
 			font-size: 32px;
+			max-width: 518px;
 		}
 		@media (min-width: $screen-lg) {
 			font-size: 40px;
 		}
 	}
 	&__button {
+		flex-shrink: 0;
 		margin-top: 16px;
 		@media (min-width: $screen-nexus) {
-			margin-left: 32px;
-			margin-top: 0;
 			width: 240px;
 		}
 		@media (min-width: $screen-sm) {
+			margin-top: 24px;
+		}
+		@media (min-width: $screen-md) {
+			margin-top: 0;
 			margin-left: 56px;
 		}
 		@media (min-width: $screen-lg) {
