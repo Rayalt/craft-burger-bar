@@ -1,0 +1,48 @@
+// В этом файле должны быть стили для БЭМ-блока header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header {
+	&__inner {
+		align-items: center;
+		display: flex;
+		justify-content: flex-end;
+		font-family: var(--font-primary);
+		line-height: 1;
+		padding: 16px 0;
+		@media (min-width: $screen-nexus) {
+			justify-content: flex-start;
+		}
+		@media (min-width: $screen-sm) {
+			padding: 24px 0;
+			
+		}
+	}
+	&__text {
+		color: var(--color-accent);
+		font-family: var(--font-primary);
+		font-size: 12px;
+		margin: 0;
+		text-align: right;
+		@media (min-width: $screen-sm) {
+			font-size: 16px;
+		}
+	}
+	&__phone {
+		color: var(--color-secondary);
+		font-family: inherit;
+		font-size: 22px;
+		letter-spacing: 0.02em;
+		line-height: inherit;
+		margin-left: 16px;
+		text-decoration: none;
+		transition: transform .25s ease;
+		@media (min-width: $screen-sm) {
+			font-size: 40px;
+			margin-left: 32px;
+		}
+		&:hover {
+			transform: translateY(-2px);
+		}
+	}
+}

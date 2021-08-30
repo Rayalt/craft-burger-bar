@@ -1,0 +1,83 @@
+// В этом файле должны быть стили для БЭМ-блока footer, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.footer {
+	&__inner {
+		padding: 24px 0 32px;
+		@media (min-width: $screen-sm) {
+			padding: 32px 0 40px;
+		}
+		@media (min-width: $screen-lg) {
+			padding: 56px 0 72px;
+		}
+	}
+	&__logo {
+		height: 104px;
+		width: 226px;
+		display: block;
+		@media (min-width: $screen-sm) {
+			height: 72px;
+			width: 156px;
+		}
+	}
+	&__socials {
+		display: grid;
+		grid-auto-flow: column;
+		grid-gap: 24px;
+		justify-content: start;
+	}
+	&__socials-link {
+		text-decoration: none;
+		fill: var(--color-secondary);
+		transition: fill .25s ease;
+		&:hover {
+			fill: var(--color-accent);
+		}
+	}
+	&__socials-icon {
+		fill: inherit;
+		height: 32px;
+		margin-top: 32px;
+		width: 32px;
+	}
+	&__row {
+		@media (min-width: $screen-nexus) {
+			align-items: flex-end;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	&__info {
+		margin-top: 24px;
+		@media (min-width: $screen-nexus) {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 48px;
+		}
+	}
+	&__text {
+		color: var(--color-secondary);
+		font-size: 16px;
+		font-weight: 300;
+		letter-spacing: 0.02em;
+		line-height: 1;
+		margin: 0;
+		& + & {
+			margin-top: 16px;
+			@media (min-width: $screen-nexus) {
+				margin-top: 0;
+			}
+		}
+		a, span {
+			color: var(--color-accent);
+			font-weight: 700;
+		}
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

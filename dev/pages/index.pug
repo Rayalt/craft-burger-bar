@@ -1,0 +1,222 @@
+extends ../pug/layout_default.pug
+
+block variables
+
+block meta
+	title Главная страница
+
+block content
+	section.hero
+		.grid
+			.grid__row
+				.grid__col.grid__col_sm-10.grid__col_md-8
+					.hero__inner
+						.hero__content
+							h1.hero__heading.heading.heading_shadow Франшиза<br>«КрафтБургерБар»
+							p.hero__descr Начни зарабатывать от 500 000 рублей в месяц через 70 дней с франшизой «КрафтБургерБар»*
+							p.hero__endnote * В каждом отдельном случае результат может отличаться
+							p.hero__text КрафтБургерБар — так начинаются твои лучшие воспоминания!
+							p.hero__text У нас каждый день — как вечер пятницы!
+							.hero__button
+								a.button(href='#' data-hystmodal='#access') Получить доступ к фин модели
+		.hero__imgs
+			svg.hero__logo
+				use(xlink:href='img/svgSprite.svg#kbb-logo')
+			img.hero__img(src='img/img__burger.png' alt= 'рисунок бургера')
+		picture
+			source(media='(max-width: 799px)' srcset='img/img__bg-texture_@1.jpg 800w')
+			source(media='(min-width: 800px)' srcset='img/img__bg-texture_@2.jpg 1920w')
+			img.hero__bg(src='img/img__bg-texture_@1.jpg' srcset='img/img__bg-texture_@1.jpg 800w, img/img__bg-texture_@2.jpg 1920w' alt= 'фоновое изображение')
+	
+	section.about
+		.about__img
+		.grid
+			.grid__row
+				.grid__col.col-offset__sm-5.grid__col_sm-7
+					.about__inner
+						p.about__text #[strong «КрафтБургерБар»] — это франшиза гриль-баров с бургерами из мраморной говядины, стейками и огромным ассортиментом крафтового пива.
+						p.about__text Мы создали место, пропитанное ароматом настоящих бургеров и звуками пенящегося крафтового пива. От наших бургеров в восторге сам Гордон Рамзи (просто он пока ещё об этом не знает). Наше пиво побеждало бы на каждом Октоберфесте (просто мы не хотим лишать Германию гордости за их пиво). #[strong Мы — франшиза «КрафтБургерБар».] Мы больше, чем просто бургерная. #[strong Мы — образ жизни.]
+						p.about__text Наш первый бар был открыт в августе 2016 года в Барнауле. Все эти годы мы упорно работали над качеством нашей продукции и сервиса, чтобы запустить франшизу.
+						p.about__text Мы предлагаем нашим франчайзи полный пакет разработанных нами стандартов, авторские рецепты и маркетинговый план.
+						p.about__text Начни зарабатывать на франшизе «КрафтБургерБар» вместе с нами!
+						.about__button
+							a.button(href='#' data-hystmodal='#application') Оставить заявку
+
+	section.appearance
+		.appearance__inner
+			.grid
+				.grid__row
+					.grid__col
+						h2.appearance__heading.heading Посмотрите как выглядит<br>КрафтБургерБар
+			.appearance__slider.swiper
+				.swiper-wrapper.appearance__wrapper
+					.appearance__slide.swiper-slide
+						img.appearance__img(src='img/img__party_@1.jpg' srcset='img/img__party_@2.jpg 2x' alt= 'вечеринка в КрафтБургерБар')
+					.appearance__slide.swiper-slide
+						img.appearance__img(src='img/img__workers_@1.jpg' srcset='img/img__workers_@2.jpg 2x' alt= 'сотрудники КрафтБургерБар')
+					.appearance__slide.swiper-slide
+						img.appearance__img(src='img/img__menu_@1.jpg' srcset='img/img__menu_@2.jpg 2x' alt= 'меню КрафтБургерБар')
+				.swiper-pagination.appearance__pagination
+				.appearance__button.appearance__button_prev.swiper-button-prev
+				.appearance__button.appearance__button_next.swiper-button-next
+
+	section.differences
+		.grid
+			.grid__row
+				.grid__col
+					.differences__inner
+						h2.differences__heading.heading Чем мы отличаемся<br>от других кафе-бургерных?
+						.differences__tiles
+							.differences__item
+								img.differences__img(src='img/icon__time_@1.png' srcset='img/icon__time_@2.png' alt='иконка часов')
+								p.differences__text работаем 24 часа
+							.differences__item
+								img.differences__img(src='img/icon__bottle_@1.png' srcset='img/icon__bottle_@2.png' alt='иконка бутылки')
+								p.differences__text более 300 сортов пива
+							.differences__item
+								img.differences__img(src='img/icon__beer_@1.png' srcset='img/icon__beer_@2.png' alt='иконка пива')
+								p.differences__text более 100 сортов крафтового пива
+							.differences__item
+								img.differences__img(src='img/icon__coctail_@1.png' srcset='img/icon__coctail_@2.png' alt='иконка коктейля')
+								p.differences__text коктейльный бар
+							.differences__item
+								img.differences__img(src='img/icon__meat_@1.png' srcset='img/icon__meat_@2.png' alt='иконка мяса')
+								p.differences__text используем только мраморную говядину компании Мираторг
+							.differences__item
+								img.differences__img(src='img/icon__grill_@1.png' srcset='img/icon__grill_@2.png' alt='иконка гриля')
+								p.differences__text готовим на живом огне на березовых углях
+							.differences__item
+								img.differences__img(src='img/icon__burger_@1.png' srcset='img/icon__burger_@2.png' alt='иконка бургера')
+								p.differences__text более 10 видов<br>бургеров
+							.differences__item
+								img.differences__img(src='img/icon__steak_@1.png' srcset='img/icon__steak_@2.png' alt='иконка стейка')
+								p.differences__text более 10 видов<br>стейков
+						.differences__action
+							h3.differences__subtitle.subtitle Хочешь узнать подробнее?
+							.differences__button
+								a.button(href='#' data-hystmodal='#application') Оставить заявку
+		picture
+			source(media='(max-width: 799px)' srcset='img/img__bg-texture_@1.jpg 800w')
+			source(media='(min-width: 800px)' srcset='img/img__bg-texture_@2.jpg 1920w')
+			img.differences__bg(src='img/img__bg-texture_@1.jpg' srcset='img/img__bg-texture_@1.jpg 800w, img/img__bg-texture_@2.jpg 1920w' alt= 'фоновое изображение')
+	
+	section.speech
+		.grid
+			.grid__row
+				.grid__col
+					.speech__inner
+						blockquote.speech__citation
+							p.speech__text Я всегда интересовался современной кухней и культурой питания вообще, в первую очередь — бургерами. Это такой простор для творчества: от соуса до добавок. Начинал работать с ресторанами и кафе, учился у поваров, ездил по Европе — и в конце концов пришел к мысли, что в России считают бургеры быстрой, часто некачественной едой.
+							p.speech__text Я стал экспериментировать с рецептами, искал поставщиков, анализировал — и в 2016 году открыл «КрафтБургерБар». Забегая вперед, последние 3 года я все чаще слышал вопрос: «когда же вы наконец запустите франшизу?».
+							p.speech__text В первый же месяц нас посетило огромное количество человек, мы расширили ассортимент и сразу стали продавать Крафтовое Пиво. Это изначально было нашей концепцией , т. к. эта культура набирала свою популярность и мы понимали, что Крафт займёт серьезную нишу и будет востребован. С тех пор каждый вечер у нас полный зал, а все выходные забронированы за неделю.
+							p.speech__text Я считаю, что мы в силах изменить понятие «бургер — это вредный фастфуд». Бургер — это отдельная ветвь кулинарии, в которой можно бесконечно экспериментировать и находить все новых клиентов.
+							cite.speech__sign
+								p.speech__author Кайгородов<br>Алексей Владимирович
+								p.speech__author-position директор сети гриль-баров «КрафтБургерБар»
+						img.speech__img(src='img/img__kaigorodov_@1.jpg' srcset='img/img__kaigorodov_@2.jpg' alt='Кайгородов Алексей Владимирович')
+	
+	section.advantage
+		.grid
+			.grid__row
+				.grid__col
+					.advantage__inner
+						h2.advantage__heading.heading Начните работать с нами и получите:
+						.advantage__tiles
+							.advantage__item
+								.advantage__item-count
+									p.advantage__item-number 1#[span .]
+								p.advantage__text Востребованную услугу для широкой целевой аудитории, не зависимо от города нахождения
+							.advantage__item
+								.advantage__item-count
+									p.advantage__item-number 2#[span .]
+								p.advantage__text Помощь в поиске помещения, разработка уникального дизайна интерьера
+							.advantage__item
+								.advantage__item-count
+									p.advantage__item-number 3#[span .]
+								p.advantage__text Поддержку головного офиса 24/7 на всех этапах работы
+							.advantage__item
+								.advantage__item-count
+									p.advantage__item-number 4#[span .]
+								p.advantage__text Авторские рецепты блюд
+							.advantage__item
+								.advantage__item-count
+									p.advantage__item-number 5#[span .]
+								p.advantage__text Подбор и обучение персонала
+							.advantage__item
+								.advantage__item-count
+									p.advantage__item-number 6#[span .]
+								p.advantage__text Контакты с поставщиками по минимальным ценам
+							.advantage__item
+								.advantage__item-count
+									p.advantage__item-number 7#[span .]
+								p.advantage__text Курсы обучения у франчайзера по основам ведения бизнеса
+						.advantage__action-container
+							.advantage__action
+								h3.advantage__subtitle.subtitle Интересно?
+								.advantage__button
+									a.button(href='#') Заполните анкету партнёра
+		picture
+			source(media='(max-width: 799px)' srcset='img/img__bg-bar_@1.png 800w')
+			source(media='(min-width: 800px)' srcset='img/img__bg-bar_@2.png 1920w')
+			img.advantage__bg(src='img/img__bg-bar_@1.png' srcset='img/img__bg-bar_@1.png 800w, img/img__bg-bar_@2.png 1920w' alt= 'фоновое изображение')
+		
+	section.profit
+		.grid
+			.grid__row
+				.grid__col
+					.profit__inner
+						.profit__row
+							.profit__content
+								h2.profit__heading Сумма выручки в месяц:
+								p.profit__sum 3 305 000 ₽
+								p.profit__descr Бизнес не зависит от сезонности, а интерес к качественной и вкусной еде никогда не падает, поэтому вы всегда<br>будете получать стабильную прибыль
+						.profit__row
+							.profit__action
+								h3.profit__subtitle.subtitle.subtitle_inverse Интересно?
+								.profit__button
+									a.button(href='#') Заполните анкету партнёра
+	section.tariff
+		.grid
+			.grid__row
+				.grid__col
+					.tariff__inner
+						.tariff__tiles
+							.tariff__tile
+								.tariff__tile-inner
+									.tariff__item
+										p.tariff__label Франчайзинговый пакет
+										h2.tariff__tile-title Партнёр
+									.tariff__item.tariff__item_criterion
+										p.tariff__label Критерий выбора
+										p.tariff__descr Самостоятельный выезд<br>в г. Барнаул на обучение
+									.tariff__item-group
+										.tariff__item
+											p.tariff__label Паушальный взнос
+											p.tariff__price 400 000 ₽
+										.tariff__item
+											p.tariff__label Роялти
+											p.tariff__price 30 000 ₽
+							.tariff__tile
+								.tariff__tile-inner
+									.tariff__item
+										p.tariff__label Франчайзинговый пакет
+										h2.tariff__tile-title Эксклюзив
+									.tariff__item.tariff__item_criterion
+										p.tariff__label Критерий выбора
+										p.tariff__descr Выезд специалиста ГО в город<br>открытия + личное обучение
+									.tariff__item-group
+										.tariff__item
+											p.tariff__label Паушальный взнос
+											p.tariff__price 500 000 ₽
+										.tariff__item
+											p.tariff__label Роялти
+											p.tariff__price 30 000 ₽
+						.tariff__action
+							h3.tariff__action-title Оставьте заявку, чтобы начать<br>зарабатывать уже через #[span 70 дней]
+							.tariff__button
+								a.button(href='#' data-hystmodal='#application') Оставить заявку
+					
+		picture
+			source(media='(max-width: 799px)' srcset='img/img__bg-menu_@1.png 800w')
+			source(media='(min-width: 800px)' srcset='img/img__bg-menu_@2.png 1920w')
+			img.tariff__bg(src='img/img__bg-menu_@1.png' srcset='img/img__bg-menu_@1.png 800w, img/img__bg-menu_@2.png 1920w' alt= 'фоновое изображение')

@@ -1,0 +1,108 @@
+// В этом файле должны быть стили для БЭМ-блока differences, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.differences {
+	position: relative;
+	&__bg {
+		height: 100%;
+		left: 0;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+	}
+	&__inner {
+		padding: 32px 0 40px;
+		@media (min-width: $screen-sm) {
+			padding: 80px 0 54px;
+		}
+	}
+	&__heading {
+		margin: 0;
+	}
+	&__tiles {
+		display: grid;
+		grid-gap: 16px;
+		grid-template-columns: 1fr 1fr;
+		margin-top: 40px;
+		@media (min-width: $screen-nexus) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		@media (min-width: $screen-sm) {
+			grid-gap: 32px;
+			grid-row-gap: 48px;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			margin-top: 64px;
+		}
+	}
+	&__item {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 8px;
+		@media (min-width: $screen-sm) {
+			padding-bottom: 16px;
+		}
+	}
+	&__img {
+		flex-shrink: 0;
+		height: 72px;
+		width: 72px;
+		@media (min-width: $screen-md) {
+			height: 96px;
+			width: 96px;
+		}
+	}
+	&__text {
+		color: var(--color-secondary);
+		font-family: var(--font-secondary);
+		font-size: 14px;
+		line-height: 1;
+		margin: 16px 0 0 0;
+		text-align: center;
+		@media (min-width: $screen-sm) {
+			font-size: 16px;
+		}
+		@media (min-width: $screen-md) {
+			font-size: 20px;
+			margin-top: 32px;
+		}
+		@media (min-width: $screen-lg) {
+			font-size: 24px;
+		}
+	}
+	&__action {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin-top: 40px;
+		@media (min-width: $screen-nexus) {
+			grid-auto-flow: column;
+			align-items: center;
+			flex-direction: row;
+		}
+		@media (min-width: $screen-sm) {
+			margin-top: 56px;
+		}
+		@media (min-width: $screen-md) {
+			margin-top: 74px;
+		}
+	}
+	&__subtitle {
+		margin: 0;
+	}
+	&__button {
+		margin-top: 16px;
+		@media (min-width: $screen-nexus) {
+			margin-top: 0;
+			margin-left: 40px;
+			width: 240px;
+		}
+		@media (min-width: $screen-sm) {
+			margin-left: 60px;
+		}
+	}
+}

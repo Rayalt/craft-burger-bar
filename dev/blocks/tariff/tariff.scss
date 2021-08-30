@@ -1,0 +1,209 @@
+// В этом файле должны быть стили для БЭМ-блока tariff, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.tariff {
+	color: var(--color-secondary);
+	position: relative;
+	&__bg {
+		height: 100%;
+		left: 0;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+	}
+	&__inner {
+		padding: 40px 0 48px;
+		@media (min-width: $screen-sm) {
+			padding: 80px 0 96px;
+		}
+	}
+	&__tiles {
+		display: flex;
+		flex-direction: column;
+		@media (min-width: $screen-nexus) {
+			align-items: center;
+			flex-direction: row;
+		}
+	}
+	&__tile {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@media (min-width: $screen-nexus) {
+			align-items: center;
+			min-height: 280px;
+		}
+		@media (min-width: $screen-sm) {
+			min-height: 320px;
+		}
+		@media (min-width: $screen-md) {
+			min-height: 400px;
+		}
+		@media (min-width: $screen-lg) {
+			min-height: 480px;
+		}
+		& + & {
+			box-shadow: var(--inner-shadow-top-light);
+			margin-top: 40px;
+			padding-top: 40px;
+			@media (min-width: $screen-nexus) {
+				box-shadow: var(--inner-shadow-left-light);
+				margin-left: 42px;
+				margin-top: 0;
+				padding-left: 42px;
+				padding-top: 0;
+			}
+			@media (min-width: $screen-md) {
+				margin-left: 112px;
+				padding-left: 112px;
+			}
+			@media (min-width: $screen-lg) {
+				margin-left: 160px;
+				padding-left: 160px;
+			}
+		}
+	}
+	&__tile-inner {
+		@media (min-width: $screen-lg) {
+			margin-bottom: auto;
+			margin-top: 72px;
+		}
+	}
+	&__item-group {
+		display: grid;
+		grid-auto-flow: column;
+		grid-gap: 24px;
+		justify-content: start;
+		margin-top: 24px;
+		@media (min-width: $screen-lg) {
+			grid-gap: 64px;
+			margin-top: 48px;
+		}
+	}
+	&__item {
+		display: grid;
+		grid-gap: 4px;
+		@media (min-width: $screen-nexus) {
+			grid-gap: 8px;
+		}
+		&_criterion {
+			margin-top: 32px;
+			@media (min-width: $screen-lg) {
+				margin-top: 64px;
+			}
+		}
+	}
+	&__label {
+		font-size: 10px;
+		font-weight: 500;
+		letter-spacing: 0.08em;
+		line-height: 1.17;
+		margin: 0;
+		text-transform: uppercase;
+		@media (min-width: $screen-sm) {
+			font-size: 12px;
+		}
+	}
+	&__tile-title {
+		color: var(--color-accent);
+		font-family: var(--font-primary);
+		font-size: 32px;
+		letter-spacing: 0.02em;
+		line-height: 1;
+		margin: 0;
+		text-shadow: var(--text-shadow);
+		@media (min-width: $screen-sm) {
+			font-size: 56px;
+		}
+		@media (min-width: $screen-md) {
+			font-size: 64px;
+		}
+	}
+	&__descr {
+		font-size: 14px;
+		font-weight: 300;
+		letter-spacing: 0.02em;
+		line-height: 1.2;
+		margin: 0;
+		@media (min-width: $screen-sm) {
+			font-size: 16px;
+		}
+		@media (min-width: $screen-md) {
+			font-size: 20px;
+		}
+	}
+	&__price {
+		font-size: 22px;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+		line-height: 1;
+		margin: 0;
+		@media (min-width: $screen-sm) {
+			font-size: 26px;
+		}
+		@media (min-width: $screen-md) {
+			font-size: 32px;
+		}
+	}
+	&__action {
+		align-items: flex-start;
+		background: var(--color-tertiary-40);
+		border-radius: 16px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		margin-top: 32px;
+		padding: 24px;
+		@media (min-width: $screen-nexus) {
+			align-items: center;
+			flex-direction: row;
+			padding: 24px 32px;
+		}
+		@media (min-width: $screen-sm) {
+			margin-top: 40px;
+			padding: 32px 48px;
+		}
+		@media (min-width: $screen-md) {
+			margin-top: 48px;
+			padding: 40px 72px;
+		}
+	}
+	&__action-title {
+		color: var(--color-secondary);
+		flex-shrink: 0;
+		font-family: var(--font-primary);
+		font-size: 16px;
+		line-height: 1.2;
+		margin: 0;
+		text-shadow: var(--text-shadow);
+		span {
+			color: var(--color-accent);
+		}
+		@media (min-width: $screen-sm) {
+			font-size: 24px;
+		}
+		@media (min-width: $screen-md) {
+			font-size: 32px;
+		}
+		@media (min-width: $screen-lg) {
+			font-size: 40px;
+		}
+	}
+	&__button {
+		margin-top: 16px;
+		@media (min-width: $screen-nexus) {
+			margin-left: 32px;
+			margin-top: 0;
+			width: 240px;
+		}
+		@media (min-width: $screen-sm) {
+			margin-left: 56px;
+		}
+		@media (min-width: $screen-lg) {
+			margin-left: 144px;
+		}
+	}
+}

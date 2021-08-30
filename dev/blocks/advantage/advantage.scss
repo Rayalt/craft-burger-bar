@@ -1,0 +1,124 @@
+// В этом файле должны быть стили для БЭМ-блока advantage, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.advantage {
+	position: relative;
+	&__inner {
+		padding: 32px 0 40px;
+		@media (min-width: $screen-nexus) {
+			padding-bottom: 88px;
+		}
+		@media (min-width: $screen-sm) {
+			padding: 80px 0 168px;
+		}
+	}
+	&__heading {
+		margin: 0;
+	}
+	&__tiles {
+		display: grid;
+		grid-gap: 16px;
+		margin-top: 64px;
+		@media (min-width: $screen-nexus) {
+			grid-gap: 32px;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+	}
+	&__item-count {
+		flex-shrink: 0;
+		font-family: var(--font-primary);
+		font-size: 80px;
+		line-height: 1;
+		margin-right: 16px;
+		min-height: 80px;
+		min-width: 50px;
+		@media (min-width: $screen-sm) {
+			font-size: 90px;
+			min-width: 60px;
+		}
+		@media (min-width: $screen-md) {
+			font-size: 120px;
+			min-height: 120px;
+			min-width: 88px;
+		}
+	}
+	&__item-number {
+		color: var(--color-secondary);
+		margin: 0;
+		.advantage__item:nth-of-type(2) &, .advantage__item:nth-of-type(3) &, .advantage__item:nth-of-type(7) & {
+			color: var(--color-accent);
+		}
+		span {
+			.advantage__item:nth-of-type(1) &, .advantage__item:nth-of-type(5) &, .advantage__item:nth-of-type(4) & {
+				color: var(--color-accent);
+			}
+			.advantage__item:nth-of-type(2) &, .advantage__item:nth-of-type(7) & {
+				color: var(--color-secondary);
+			}
+		}
+	}
+	&__text {
+		color: var(--color-secondary);
+		font-family: var(--font-secondary);
+		font-size: 14px;
+		letter-spacing: 0.02em;
+		line-height: 1.33;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		@media (min-width: $screen-sm) {
+			font-size: 16px;
+		}
+		@media (min-width: $screen-md) {
+			font-size: 20px;
+		}
+		@media (min-width: $screen-lg) {
+			font-size: 24px;
+		}
+		
+		
+	}
+	&__action-container {
+		position: relative;
+	}
+	&__action {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-end;
+		text-align: right;
+		margin-top: 40px;
+		@media (min-width: $screen-nexus) {
+			bottom: -64px;
+			margin-top: 0;
+			position: absolute;
+			right: 0;
+		}
+	}
+	&__subtitle {
+		margin: 0;
+	}
+	&__bg {
+		height: 100%;
+		left: 0;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+	}
+	&__button {
+		margin-top: 16px;
+		@media (min-width: $screen-nexus) {
+			width: 320px;
+		}
+		@media (min-width: $screen-md) {
+			margin-top: 24px;
+		}
+	}
+}

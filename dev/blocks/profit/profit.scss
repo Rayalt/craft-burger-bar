@@ -1,0 +1,144 @@
+// В этом файле должны быть стили для БЭМ-блока profit, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.profit {
+	background: var(--color-secondary);
+	&__inner {
+		display: grid;
+		grid-gap: 32px;
+		padding: 40px 0 48px;
+		@media (min-width: $screen-nexus) {
+			grid-auto-flow: column;
+		}
+		@media (min-width: $screen-sm) {
+			padding: 64px 0;
+			grid-gap: 40px;
+		}
+		@media (min-width: $screen-md) {
+			padding: 80px 0;
+		}
+		@media (min-width: $screen-lg) {
+			grid-gap: 65px;
+		}
+	}
+	&__row {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@media (min-width: $screen-sm) {
+			min-height: 320px;
+		}
+		@media (min-width: $screen-md) {
+			min-height: 400px;
+		}
+		@media (min-width: $screen-lg) {
+			min-height: 480px;
+		}
+		& + & {
+			padding-top: 32px;
+			box-shadow: var(--inner-shadow-top);
+			@media (min-width: $screen-nexus) {
+				box-shadow: var(--inner-shadow-left);
+				padding-top: 0;
+				padding-left: 24px;
+			}
+			@media (min-width: $screen-sm) {
+				padding-left: 24px;
+			}
+			@media (min-width: $screen-md) {
+				padding-left: 32px;
+			}
+		}
+	}
+	&__content {
+		@media (min-width: $screen-lg) {
+			margin-bottom: auto;
+			margin-top: 80px;
+		}
+	}
+	&__heading {
+		font-family: var(--font-primary);
+		font-size: 24px;
+		line-height: 1;
+		margin: 0;
+		@media (min-width: $screen-sm) {
+			font-size: 32px;
+		}
+		@media (min-width: $screen-md) {
+			font-size: 40px;
+		}
+		@media (min-width: $screen-lg) {
+			font-size: 48px;
+		}
+	}
+	&__sum {
+		color: var(--color-accent);
+		font-family: var(--font-primary);
+		font-size: 50px;
+		line-height: 1;
+		margin: 4px 0 0 0;
+		text-shadow: var(--text-shadow);
+		@media (min-width: $screen-sm) {
+			font-size: 75px;
+			text-shadow: var(--text-shadow-bold);
+			margin-top: 8px;
+		}
+		@media (min-width: $screen-md) {
+			font-size: 120px;
+			margin-top: 16px;
+		}
+		@media (min-width: $screen-lg) {
+			font-size: 160px;
+		}
+	}
+	&__descr {
+		font-family: var(--font-secondary);
+		font-size: 14px;
+		line-height: 1.33;
+		margin: 8px 0 0 0;
+		max-width: 428px;
+		@media (min-width: $screen-sm) {
+			font-size: 16px;
+			margin-top: 16px;
+			max-width: none;
+		}
+		@media (min-width: $screen-md) {
+			font-size: 20px;
+			margin-top: 32px;
+		}
+		@media (min-width: $screen-lg) {
+			font-size: 24px;
+		}
+	}
+	&__action {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		@media (min-width: $screen-nexus) {
+			align-items: center;
+		}
+		@media (min-width: $screen-sm) {
+			margin-bottom: auto;
+			margin-top: 64px;
+		}
+		@media (min-width: $screen-md) {
+			margin-top: 112px;
+		}
+		@media (min-width: $screen-lg) {
+			margin-top: 164px;
+		}
+	}
+	&__subtitle {
+		margin: 0;
+	}
+	&__button {
+		margin-top: 16px;
+		@media (min-width: $screen-nexus) {
+			width: 320px;
+		}
+		@media (min-width: $screen-md) {
+			margin-top: 24px;
+		}
+	}
+}
