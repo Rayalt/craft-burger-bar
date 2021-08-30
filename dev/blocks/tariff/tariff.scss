@@ -162,6 +162,8 @@
 			align-items: center;
 			flex-direction: row;
 			margin-top: 48px;
+		}
+		@media (min-width: $screen-lg) {
 			padding: 40px 72px;
 		}
 	}
@@ -184,10 +186,11 @@
 		}
 		@media (min-width: $screen-md) {
 			font-size: 32px;
-			max-width: 518px;
+			max-width: 420px;
 		}
 		@media (min-width: $screen-lg) {
 			font-size: 40px;
+			max-width: 518px;
 		}
 	}
 	&__button {
