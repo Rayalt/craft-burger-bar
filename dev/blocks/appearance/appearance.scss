@@ -64,7 +64,9 @@
 		background: var(--color-accent);
 		border-radius: 50%;
 		height: 32px;
+		outline: none;
 		width: 32px;
+		transition: background .25s ease;
 		@media (min-width: $screen-sm) {
 			height: 40px;
 			width: 40px;
@@ -72,6 +74,9 @@
 		@media (min-width: $screen-lg) {
 			height: 56px;
 			width: 56px;
+		}
+		&:hover {
+			background: var(--color-secondary);
 		}
 		&_prev {
 			@media (min-width: $screen-md) {
