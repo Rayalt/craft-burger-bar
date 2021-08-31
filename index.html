@@ -205,7 +205,7 @@
 									</div>
 									<div class="advantage__action-container">
 										<div class="advantage__action">
-											<h3 class="advantage__subtitle subtitle">Интересно?</h3><a class="button advantage__button" href="#">Заполните анкету партнёра</a>
+											<h3 class="advantage__subtitle subtitle">Интересно?</h3><a class="button advantage__button" href="#" data-hystmodal="#form">Заполните анкету партнёра</a>
 										</div>
 									</div>
 								</div>
@@ -231,7 +231,7 @@
 									</div>
 									<div class="profit__row">
 										<div class="profit__action">
-											<h3 class="profit__subtitle subtitle subtitle_inverse">Интересно?</h3><a class="button profit__button" href="#">Заполните анкету партнёра</a>
+											<h3 class="profit__subtitle subtitle subtitle_inverse">Интересно?</h3><a class="button profit__button" href="#" data-hystmodal="#form">Заполните анкету партнёра</a>
 										</div>
 									</div>
 								</div>
@@ -362,6 +362,31 @@
 						</svg></div>
 					<div class="modal__body">
 						<h2 class="modal__title">Оставить заявку</h2>
+						<form class="modal__form">
+							<div class="modal__fields">
+								<div class="field"><label class="field__label"></label>
+									<div class="input field__input"><input class="input__data" placeholder="Ваше имя" type="text" required></div>
+								</div>
+								<div class="field"><label class="field__label"></label>
+									<div class="input field__input"><input class="input__data" placeholder="Ваш номер телефона" type="tel" data-mask-tel required></div>
+								</div>
+								<div class="field"><label class="field__label"></label>
+									<div class="input field__input"><input class="input__data" placeholder="E-mail" type="email" required></div>
+								</div>
+							</div><button class="modal__button button" data-hystmodal="#success">Отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hystmodal" id="form" aria-hidden="true">
+			<div class="hystmodal__wrap">
+				<div class="hystmodal__window modal" role="dialog" aria-modal="true">
+					<div class="modal__header"><svg class="modal__close" data-hystclose="">
+							<use xlink:href="img/svgSprite.svg#icon__cross"></use>
+						</svg></div>
+					<div class="modal__body">
+						<h2 class="modal__title">Заполнить анкету партнера</h2>
 						<form class="modal__form">
 							<div class="modal__fields">
 								<div class="field"><label class="field__label"></label>
