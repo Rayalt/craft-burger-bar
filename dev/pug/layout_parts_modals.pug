@@ -45,6 +45,30 @@
 							.input.field__input
 								input.input__data(placeholder= 'E-mail' type= 'email' required)
 					button.modal__button.button(data-hystmodal='#success') Отправить
+
+#form.hystmodal(aria-hidden='true')
+	.hystmodal__wrap
+		.hystmodal__window.modal(role='dialog' aria-modal='true')
+			.modal__header
+				svg.modal__close(data-hystclose='')
+					use(xlink:href='img/svgSprite.svg#icon__cross')
+			.modal__body
+				h2.modal__title Заполнить анкету партнера
+				form.modal__form
+					.modal__fields
+						.field
+							label.field__label
+							.input.field__input
+								input.input__data(placeholder= 'Ваше имя' type= 'text' required)
+						.field
+							label.field__label
+							.input.field__input
+								input.input__data(placeholder= 'Ваш номер телефона' type= 'tel' data-mask-tel required)
+						.field
+							label.field__label
+							.input.field__input
+								input.input__data(placeholder= 'E-mail' type= 'email' required)
+					button.modal__button.button(data-hystmodal='#success') Отправить
 								
 #success.hystmodal(aria-hidden='true')
 	.hystmodal__wrap
